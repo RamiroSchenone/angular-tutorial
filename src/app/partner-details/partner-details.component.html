@@ -1,0 +1,18 @@
+<div *ngIf="partner">
+    <h2>Detalle de {{partner.name | uppercase}}</h2>
+<div>
+    <span>ID Socio: </span>{{partner.id}}
+</div>
+<div>
+    <label for="name">Nombre: </label>
+    <input id="name" [(ngModel)]="partner.name" placeholder="Editar Nombre"></div>
+<div>
+<div>
+    <label for="age">Edad: </label>
+    <input id="age" [(ngModel)]="partner.age" placeholder="Editar Edad"></div>
+<div>
+<div>
+    <label for="position">Puesto: </label>
+    <input id="position" [(ngModel)]="partner.position" placeholder="Editar puesto"></div>
+<div>
+</div>

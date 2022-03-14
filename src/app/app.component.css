@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+*{
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Application-wide Styles */
+h1 {
+    color: #369;
+    font-size: 250%;
+}
+h2, h3 {
+    color: #444;
+    font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[type="text"], button {
+  color: #333;
+  font-family: Cambria, Georgia, serif;
+}
