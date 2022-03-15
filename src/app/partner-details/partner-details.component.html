@@ -1,7 +1,7 @@
 <div *ngIf="partner">
     <h2>Detalle de {{partner.name | uppercase}}</h2>
 <div>
-    <span>ID Socio: </span>{{partner.id}}
+    <label>ID Socio: </label>{{partner.id}}
 </div>
 <div>
     <label for="name">Nombre: </label>
@@ -16,3 +16,5 @@
     <input id="position" [(ngModel)]="partner.position" placeholder="Editar puesto"></div>
 <div>
 </div>
+
+<button class="back" type="button" (click)="goBack()">Atras</button>

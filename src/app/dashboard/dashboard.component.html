@@ -1,0 +1,6 @@
+<h2>Top Socios</h2>
+<div class="partner-menu">
+  <a *ngFor="let partner of partners" routerLink="/detail/{{partner.id}}">
+    {{partner.name}}
+  </a>
+</div>

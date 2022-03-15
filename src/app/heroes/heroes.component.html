@@ -1,13 +1,8 @@
-<h2>Nuestros socios</h2>
+<h2>Mis socios</h2>
 <ul class="partners">
-    <li *ngFor="let partner of partners">
-
-        <button [class.selected]="partner === selectedPartner" type="button" (click)="onSelect(partner)">
-            <span class="badge">{{partner.id}}</span>
-            <span class="name">{{partner.name}}</span>
-        </button>
-
-    </li>
+  <li *ngFor="let partner of partners">
+    <a routerLink="/detail/{{partner.id}}">
+      <span class="badge">{{partner.id}}</span> {{partner.name}}
+    </a>
+  </li>
 </ul>
-
-<app-partner-details [partner]="selectedPartner"></app-partner-details>
