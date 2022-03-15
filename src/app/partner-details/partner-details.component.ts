@@ -34,4 +34,11 @@ export class PartnerDetailsComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    if (this.partner) {
+      this.partnerService.updatePartner(this.partner)
+        .subscribe(() => this.goBack());
+    }
+  }
+
 }

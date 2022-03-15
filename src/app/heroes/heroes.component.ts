@@ -23,4 +23,17 @@ export class HeroesComponent implements OnInit {
     .subscribe(partners => this.partners = partners)
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.partnerService.addPartner({ name } as Partner)
+      .subscribe(partner => {
+        this.partners.push(partner);
+      });
+  }
+
+  delete(partner: Partner): void {
+    this.partners = this.partners.filter(h => h !== partner);
+    this.partnerService.deletePartner(partner.id).subscribe();
+  }
 }

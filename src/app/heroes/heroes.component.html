@@ -4,5 +4,17 @@
     <a routerLink="/detail/{{partner.id}}">
       <span class="badge">{{partner.id}}</span> {{partner.name}}
     </a>
+    <button type="button" class="delete" title="delete partner" 
+    (click)="delete(partner)">x</button>
   </li>
 </ul>
+
+<div>
+    <label for="new-partner">Nombre del socio: </label>
+    <input id="new-partner" #partnerName />
+  
+    <button type="button" class="add-button" (click)="add(partnerName.value); partnerName.value=''">
+      Agregar socio
+    </button>
+</div>
+
